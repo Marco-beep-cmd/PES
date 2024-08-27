@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <title>Portal Estudiantil Secundario</title>
+    <link rel="icon" href="logo.ico" type="image/x-ico">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(assets/images/choosing-bg.jpg);
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            margin: 0;
+        }
+
+        .container {
+            width: 60%;
+            max-width: 600px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5); 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .container:hover {
+            transform: scale(1.05); 
+            transition: transform 0.2s;
+        }
+
+        .question {
+            display: none;
+        }
+
+        .question.active {
+            display: block;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            transition: transform 0.2s; 
+        }
+
+        .btn:hover {
+            transform: scale(1.1); 
+        }
+        .question {
+            display: none;
+        }
+        .question.active {
+            display: block;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .result {
+            display: none;
+            text-align: center;
+            margin-top: 20px; }
+            @media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+        </style>
+        
+</head>
+
+<body>
+    <div class="container">
+        <h2>Preguntas Intermedias sobre Microsoft Word</h2>
+
+        <!-- Preguntas sobre Microsoft Word -->
+        <div id="question1" class="question active">
+            <p><strong>1. ¿Qué son las tabulaciones en Microsoft Word y cómo se utilizan?</strong></p>
+            <label><input type="radio" name="q1" value="0"> a) Son espacios en blanco que se insertan automáticamente entre palabras.</label><br>
+            <label><input type="radio" name="q1" value="1"> b) Son herramientas que permiten alinear texto a una posición específica en la regla.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q1" value="0"> c) Son estilos de formato que cambian la fuente del texto.</label><br>
+            <label><input type="radio" name="q1" value="0"> d) Son opciones de corrección automática de ortografía.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(1)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question2" class="question">
+            <p><strong>2. ¿Cómo se puede configurar una tabulación izquierda en un documento de Word?</strong></p>
+            <label><input type="radio" name="q2" value="0"> a) Haciendo clic en "Insertar" y luego en "Tabulación".</label><br>
+            <label><input type="radio" name="q2" value="0"> b) Arrastrando el marcador de tabulación en la regla hacia la izquierda.</label><br>
+            <label><input type="radio" name="q2" value="0"> c) Haciendo doble clic en el margen izquierdo de la página.</label><br>
+            <label><input type="radio" name="q2" value="1"> d) Usando la opción "Tabulaciones" en el cuadro de diálogo de párrafo y seleccionando "Izquierda".</label><br><!--(Correcta)-->
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(2)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question3" class="question">
+            <p><strong>3. ¿Cuál es la diferencia entre una tabulación izquierda, derecha, centrada y decimal?</strong></p>
+            <label><input type="radio" name="q3" value="0"> a) Izquierda alinea el texto a la derecha, derecha a la izquierda, centrada al centro y decimal al punto decimal.</label><br>
+            <label><input type="radio" name="q3" value="1"> b) Izquierda alinea el texto a la izquierda, derecha a la derecha, centrada al centro y decimal al punto decimal.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q3" value="0"> c) Todas funcionan de la misma manera, solo que en diferentes posiciones.</label><br>
+            <label><input type="radio" name="q3" value="0"> d) Son tipos de fuentes que se utilizan en documentos formales.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(3)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question4" class="question">
+            <p><strong>4. ¿Cómo se elimina una tabulación existente en un párrafo?</strong></p>
+            <label><input type="radio" name="q4" value="0"> a) Haciendo doble clic sobre la tabulación en la regla.</label><br>
+            <label><input type="radio" name="q4" value="1"> b) Arrastrando el marcador de tabulación fuera de la regla.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q4" value="0"> c) Cambiando el estilo de párrafo a "Sin espaciado".</label><br>
+            <label><input type="radio" name="q4" value="0"> d) Borrando manualmente el texto que sigue a la tabulación.</label><br> <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(4)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question5" class="question">
+            <p><strong>5. ¿Qué pasos se siguen para ajustar las tabulaciones en el cuadro de diálogo de Tabulaciones?</strong></p>
+            <label><input type="radio" name="q5" value="1"> a) Seleccionar el texto, abrir el cuadro de diálogo de Tabulaciones y ajustar la posición deseada.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q5" value="0"> b) Ir a "Archivo" y luego a "Opciones".</label><br>
+            <label><input type="radio" name="q5" value="0"> c) Usar la opción "Estilos" para ajustar las tabulaciones.</label><br>
+            <label><input type="radio" name="q5" value="0"> d) Arrastrar el texto hacia la posición deseada.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(5)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question6" class="question">
+            <p><strong>6. ¿Qué es el interlineado y por qué es importante en la edición de documentos?</strong></p>
+            <label><input type="radio" name="q6" value="1"> a) Es la cantidad de espacio entre las líneas de texto en un párrafo.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q6" value="0"> b) Es la distancia entre los márgenes de la página.</label><br>
+            <label><input type="radio" name="q6" value="0"> c) Es el espacio entre párrafos en un documento.</label><br>
+            <label><input type="radio" name="q6" value="0"> d) Es una herramienta para ajustar el espaciado de las palabras en una línea.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(6)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question7" class="question">
+            <p><strong>7. ¿Cómo se cambia el interlineado a 1.5 en un párrafo específico?</strong></p>
+            <label><input type="radio" name="q7" value="1"> a) Seleccionando el párrafo y ajustando el valor en la barra de herramientas de formato.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q7" value="0"> b) Cambiando el tamaño de la fuente a 1.5.</label><br>
+            <label><input type="radio" name="q7" value="0"> c) Usando la herramienta "Centrar" en la barra de herramientas.</label><br>
+            <label><input type="radio" name="q7" value="0"> d) Ajustando el margen izquierdo a 1.5.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(7)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question8" class="question">
+            <p><strong>8. ¿Qué diferencia hay entre interlineado sencillo, 1.5 y doble en Word?</strong></p>
+            <label><input type="radio" name="q8" value="1"> a) Sencillo es más compacto, 1.5 tiene un espacio intermedio, y doble es el más amplio.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q8" value="0"> b) Sencillo es el más amplio, 1.5 es más compacto y doble es el intermedio.</label><br>
+            <label><input type="radio" name="q8" value="0"> c) Los tres interlineados son iguales, solo cambian en la impresión.</label><br>
+            <label><input type="radio" name="q8" value="0"> d) Son diferentes formatos de alineación de texto en la página.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(8)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question9" class="question">
+            <p><strong>9. ¿Cómo se aplica un interlineado personalizado a un párrafo?</strong></p>
+            <label><input type="radio" name="q9" value="1"> a) Seleccionando el párrafo y ajustando el valor en la opción de interlineado personalizado del cuadro de diálogo de párrafo.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q9" value="0"> b) Ajustando la sangría del párrafo.</label><br>
+            <label><input type="radio" name="q9" value="0"> c) Cambiando el estilo del texto a "Personalizado".</label><br>
+            <label><input type="radio" name="q9" value="0"> d) Ajustando el tamaño de la fuente a un valor personalizado.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(9)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question10" class="question">
+            <p><strong>10. ¿Qué es el espacio antes y después de un párrafo y cómo se ajusta?</strong></p>
+            <label><input type="radio" name="q10" value="0"> a) Es el espacio entre líneas en un párrafo, y se ajusta en la barra de herramientas de formato.</label><br>
+            <label><input type="radio" name="q10" value="1"> b) Es el espacio adicional entre párrafos, y se ajusta en el cuadro de diálogo de párrafo.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q10" value="0"> c) Es la distancia entre los márgenes de la página.</label><br>
+            <label><input type="radio" name="q10" value="0"> d) Es el espacio que se deja al final de cada línea en un párrafo.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(10)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question11" class="question">
+            <p><strong>11. ¿Qué son los estilos en Microsoft Word y cómo pueden mejorar la consistencia de un documento?</strong></p>
+            <label><input type="radio" name="q11" value="0"> a) Son plantillas predefinidas que se aplican a las tablas en Word.</label><br>
+            <label><input type="radio" name="q11" value="1"> b) Son conjuntos de formatos predefinidos que se aplican a texto, párrafos y otros elementos, mejorando la consistencia.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q11" value="0"> c) Son herramientas para corregir la gramática y la ortografía en Word.</label><br>
+            <label><input type="radio" name="q11" value="0"> d) Son archivos externos que se importan a Word para aplicar formato.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(11)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question12" class="question">
+            <p><strong>12. ¿Cómo se crea un nuevo estilo basado en la selección actual de texto?</strong></p>
+            <label><input type="radio" name="q12" value="1"> a) Seleccionando el texto, haciendo clic derecho y eligiendo "Crear estilo".</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q12" value="0"> b) Copiando el formato y aplicándolo a un nuevo documento.</label><br>
+            <label><input type="radio" name="q12" value="0"> c) Haciendo clic en "Insertar" y luego en "Estilo".</label><br>
+            <label><input type="radio" name="q12" value="0"> d) Guardando el documento como una plantilla.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(12)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question13" class="question">
+            <p><strong>13. ¿Qué es un estilo de título y cómo se aplica en un documento de Word?</strong></p>
+            <label><input type="radio" name="q13" value="0"> a) Es un tipo de formato que se aplica a las listas numeradas.</label><br>
+            <label><input type="radio" name="q13" value="1"> b) Es un formato específico que se aplica a los encabezados de secciones en el documento.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q13" value="0"> c) Es una opción de formato que se utiliza solo en tablas.</label><br>
+            <label><input type="radio" name="q13" value="0"> d) Es un formato predeterminado que se aplica automáticamente a todas las páginas del documento.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(13)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question14" class="question">
+            <p><strong>14. ¿Cómo se modifican los atributos de un estilo existente?</strong></p>
+            <label><input type="radio" name="q14" value="1"> a) Seleccionando el estilo en la lista de estilos y eligiendo "Modificar".</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q14" value="0"> b) Editando manualmente cada párrafo que utiliza ese estilo.</label><br>
+            <label><input type="radio" name="q14" value="0"> c) Eliminando el estilo y creando uno nuevo.</label><br>
+            <label><input type="radio" name="q14" value="0"> d) Aplicando un formato diferente en la barra de herramientas.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(14)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question15" class="question">
+            <p><strong>15. ¿Cuál es la ventaja de usar estilos al generar una tabla de contenido automáticamente?</strong></p>
+            <label><input type="radio" name="q15" value="1"> a) Facilita la creación y actualización de la tabla de contenido, reflejando los cambios automáticamente.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q15" value="0"> b) Aumenta el tamaño del archivo, haciendo que sea más fácil de leer.</label><br>
+            <label><input type="radio" name="q15" value="0"> c) Reduce el tiempo de carga del documento en Word.</label><br>
+            <label><input type="radio" name="q15" value="0"> d) Hace que el documento se imprima más rápido.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(15)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question16" class="question">
+            <p><strong>16. ¿Cómo se inserta una tabla de contenido en un documento de Word?</strong></p>
+            <label><input type="radio" name="q16" value="0"> a) Yendo a la pestaña "Insertar" y eligiendo "Tabla".</label><br>
+            <label><input type="radio" name="q16" value="1"> b) Seleccionando la pestaña "Referencias" y eligiendo "Tabla de contenido".</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q16" value="0"> c) Haciendo clic en "Archivo" y luego en "Nuevo".</label><br>
+            <label><input type="radio" name="q16" value="0"> d) Usando el menú "Ver" y seleccionando "Esquema".</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(16)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question17" class="question">
+            <p><strong>17. ¿Qué pasos se deben seguir para actualizar una tabla de contenido después de realizar cambios en el documento?</strong></p>
+            <label><input type="radio" name="q17" value="1"> a) Seleccionando la tabla de contenido y haciendo clic en "Actualizar tabla".</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q17" value="0"> b) Borrando la tabla de contenido y creando una nueva.</label><br>
+            <label><input type="radio" name="q17" value="0"> c) Haciendo clic en "Archivo" y seleccionando "Guardar como".</label><br>
+            <label><input type="radio" name="q17" value="0"> d) Editando manualmente la tabla de contenido.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(17)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question18" class="question">
+            <p><strong>18. ¿Cómo se personalizan los niveles de una tabla de contenido?</strong></p>
+            <label><input type="radio" name="q18" value="1"> a) Modificando los estilos de los títulos en el documento.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q18" value="0"> b) Cambiando el tamaño de la fuente de la tabla de contenido.</label><br>
+            <label><input type="radio" name="q18" value="0"> c) Ajustando los márgenes en el cuadro de diálogo de página.</label><br>
+            <label><input type="radio" name="q18" value="0"> d) Agregando saltos de página antes de cada título.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(18)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question19" class="question">
+            <p><strong>19. ¿Qué diferencia hay entre una tabla de contenido manual y una automática en Word?</strong></p>
+            <label><input type="radio" name="q19" value="1"> a) La tabla manual debe actualizarse manualmente, mientras que la automática se actualiza en base a los estilos aplicados.</label><br><!--(Correcta)-->
+            <label><input type="radio" name="q19" value="0"> b) La tabla manual es generada por Word y la automática por el usuario.</label><br>
+            <label><input type="radio" name="q19" value="0"> c) La tabla automática debe crearse cada vez que se modifica el documento.</label><br>
+            <label><input type="radio" name="q19" value="0"> d) La tabla manual es editable mientras que la automática no.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="nextQuestion(19)">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="question20" class="question">
+            <p><strong>20. ¿Cómo se eliminan entradas no deseadas de una tabla de contenido?</strong></p>
+            <label><input type="radio" name="q20" value="0"> a) Borrando las entradas directamente desde la tabla de contenido.</label><br>
+            <label><input type="radio" name="q20" value="1"> b) Editando los títulos en el documento y actualizando la tabla de contenido.</label><br> <!--(Correcta)-->
+            <label><input type="radio" name="q20" value="0"> c) Cambiando el tamaño de la fuente de la tabla de contenido.</label><br>
+            <label><input type="radio" name="q20" value="0"> d) Agregando saltos de página antes de cada entrada no deseada.</label><br>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="showResult()">Finalizar y ver resultado</button>
+            </div>
+        </div>
+
+
+        <div id="result" class="result">
+            <h3>Resultado</h3>
+            <p id="score"></p>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+
+        function nextQuestion(current) {
+            const selectedOption = document.querySelector(`#question${current} input[name="q${current}"]:checked`);
+            if (selectedOption) {
+                score += parseInt(selectedOption.value);
+            }
+            document.getElementById(`question${current}`).classList.remove('active');
+            const nextQuestion = document.getElementById(`question${current + 1}`);
+            if (nextQuestion) {
+                nextQuestion.classList.add('active');
+            }
+        }
+
+        function showResult() {
+    const selectedOption = document.querySelector(`#question20 input[name="q20"]:checked`);
+    if (selectedOption) {
+        score += parseInt(selectedOption.value);
+    }
+    document.getElementById('question20').classList.remove('active');
+    document.getElementById('result').style.display = 'block';
+    
+    let resultMessage = `Has obtenido ${score} de 20 puntos.`;
+    
+    if (score > 18) {
+        resultMessage += " ¡ERES UN TIBURON, SIGUE ASI!";
+    } else if (score > 10) {
+        resultMessage += " ¡Estamos por buen camino pero no es suficiente soldado, SOMOS TIBURONES, VAMOS!";
+    } else if (score < 10) {
+        resultMessage += " ¡Inténtalo de nuevo, SOMOS TIBURONES RECUERDALO!";
+    }
+    
+    document.getElementById('score').textContent = resultMessage;
+}
+function nextQuestion(currentQuestion) {
+        const nextQuestion = document.getElementById('question' + (currentQuestion + 1));
+        const currentElement = document.getElementById('question' + currentQuestion);
+
+        // Verifica si hay más preguntas
+        if (nextQuestion) {
+            currentElement.classList.remove('active');
+            nextQuestion.classList.add('active');
+        } else {
+            // Si no hay más preguntas, marcar el cuestionario como completado
+            localStorage.setItem('quizCompleted', 'true');
+            alert('¡Has completado el cuestionario! Gracias por participar.');
+        }
+    }
+
+    // Función para verificar si el cuestionario ya fue completado
+    function checkQuizCompletion() {
+        const quizCompleted = localStorage.getItem('quizCompleted');
+        if (quizCompleted === 'true') {
+            alert('Ya has realizado este cuestionario. No puedes volver a intentarlo.');
+            // Desactivar todas las preguntas
+            const questions = document.querySelectorAll('.question');
+            questions.forEach(question => {
+                question.style.display = 'none';
+            });
+            // O puedes redirigir al usuario a otra página, por ejemplo:
+            // window.location.href = 'gracias.html';
+        }
+    }
+
+    // Verificar si el cuestionario fue completado al cargar la página
+    document.addEventListener('DOMContentLoaded', checkQuizCompletion);
+        
+    </script>
+</body>
+
+</html>
